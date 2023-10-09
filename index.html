@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Explorer - Destination Selection</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add CSS styles for image alignment */
+    .destination {
+        max-width: 400px; /* Set a maximum width for the destination div */
+        display: inline-block; /* Display destinations inline */
+        margin-right: 20px; /* Add some separation between destinations */
+    }
+
+    .destination:nth-child(even) {
+        margin-right: 0; /* Remove margin for every even destination to maintain separation */
+    }
+
+    .destination img {
+        max-width: 300px; /* Set a maximum width for all images */
+    }
+
+    /* Hide packing info initially */
+    .packing-info {
+        display: none;
+        border: 2px solid lightblue; /* Add a light blue border around packing info */
+      background: lightskyblue;
+        padding: 10px; /* Add padding to the packing info container */
+    }
+
+    /* Show packing info when selected */
+    .selected .packing-info {
+        display: block;
+    }
+
+    /* Hide the main section when not needed */
+    .hide-main {
+        display: none;
+    }
+        .destination:nth-child(even) {
+        margin-right: 0; /* Remove margin for every even destination to maintain separation */
+    }
+
+    .destination img {
+        max-width: 300px; /* Set a maximum width for all images */
+    }
+
+    /* Hide packing info initially */
+    .packing-info {
+        display: none;
+        border: 2px solid lightblue; /* Add a light blue border around packing info */
+        background: lightskyblue;
+        padding: 10px; /* Add padding to the packing info container */
+    }
+
+    /* Show packing info when selected */
+    .selected .packing-info {
+        display: block;
+    }
+
+    /* Hide the main section when not needed */
+    .hide-main {
+        display: none;
+    }
+
+    /* Style for the itinerary section */
+    #itinerary {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: lightgray;
+        color: black;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #itinerary h2 {
+        margin-top: 0;
+    }
+
+    #itinerary-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #itinerary-list li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    #itinerary-list select {
+        width: 100px;
+    }
+
+    #done-button {
+        background-color: #008CBA;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    #done-button:hover {
+        background-color: #00506b;
+    }
+
+    /* Style for the travel customization section */
+    #travel-customization {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: lightgray;
+        color: black;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #travel-customization h2 {
+        margin-top: 0;
+    }
+
+    #spacecraft,
+    #travel-mode {
+        margin-right: 10px;
+    }
+
+    #finalize-button {
+        background-color: #008CBA;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    #finalize-button:hover {
+        background-color: #00506b;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>Welcome to Solar System Explorer</h1>
+        <p>Select your destination:</p>
+    </header>
+    
+    <main>
+        <!-- Mercury -->
+<div class="destination">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercury">
+    <h2>Mercury</h2>
+    <p>Mercury is the smallest planet in our solar system and the closest to the Sun. It has a heavily cratered surface, no moons or rings, and its surface temperatures can range from -173 to 427°C.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for extreme temperature variations when visiting Mercury. Ensure your spacecraft can handle the heat and cold.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space and extreme temperatures.</li>
+        </ul>
+    </div>
+</div>
+        <!-- Venus -->
+<div class="destination">
+    <img src="https://nssdc.gsfc.nasa.gov/planetary/image/venus.jpg" alt="Venus">
+    <h2>Venus</h2>
+    <p>Venus, often referred to as Earth's "sister" planet due to their similar size and mass, is the second planet from the Sun. It has a thick atmosphere that traps heat, causing a greenhouse effect and making it the hottest planet in our solar system with surface temperatures hot enough to melt lead.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Prepare for scorching heat when visiting Venus. Ensure your spacecraft and equipment can handle extreme temperatures.</li>
+            <li>Your spacesuit should provide protection against the extreme heat and high atmospheric pressure.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Mars -->
+<div class="destination">
+    <img src="https://imageio.forbes.com/blogs-images/brucedorminey/files/2018/04/OSIRIS_Mars_true_color-1200x1200.jpg?" alt="Mars">
+    <h2>Mars</h2>
+    <p>Mars, also known as the 'Red Planet', is the fourth planet from the Sun in our solar system. It's known for its red color, which comes from iron oxide in its rocks and soil, and it has a thin atmosphere, mostly composed of carbon dioxide.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Prepare for the thin atmosphere and cold temperatures when visiting Mars. Ensure your spacecraft is equipped for atmospheric studies.</li>
+            <li>Bring specialized instruments for studying Mars' surface, geology, and potential signs of past life.</li>
+            <li>Your spacesuit should provide protection against the thin atmosphere and extreme cold.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Jupiter -->
+<div class="destination">
+    <img src="https://cdn.britannica.com/84/4284-050-16C7E8C2/Photograph-Jupiter-range-Voyager-1-cloud-bands-February-1-1979.jpg" alt="Jupiter">
+    <h2>Jupiter</h2>
+    <p>Jupiter is the largest planet in our solar system and is the fifth planet out from the Sun. It's known for its unique cloud features, including the Great Red Spot, a storm that has raged for at least 350 years and is so large that three Earths could fit inside it.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a gas giant exploration, as Jupiter has no solid surface. Ensure your spacecraft is equipped for atmospheric studies.</li>
+            <li>Bring specialized instruments for studying Jupiter's atmosphere, magnetic fields, and unique cloud formations.</li>
+            <li>Your spacesuit should provide protection against high radiation levels during flybys.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Saturn -->
+<div class="destination">
+    <img src="https://nssdc.gsfc.nasa.gov/planetary/image/saturn.jpg" alt="Saturn">
+    <h2>Saturn</h2>
+    <p>Saturn, the sixth planet from the Sun and the second-largest in our solar system, is best known for its fabulous ring system. It’s a gas giant composed of similar gases including hydrogen, helium, and methane, and has over 150 moons.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Prepare for a gas giant exploration, as Saturn has no solid surface. Ensure your spacecraft is equipped for atmospheric studies.</li>
+            <li>Consider bringing specialized instruments for studying Saturn's rings, atmosphere, and its unique moon system.</li>
+            <li>Your spacesuit should provide protection against high radiation levels during flybys.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Uranus -->
+<div class="destination">
+    <img src="https://cdn.mos.cms.futurecdn.net/vGptycb5Ys2yjsAfwzh5UP.jpg" alt="Uranus">
+    <h2>Uranus</h2>
+    <p>Uranus, the seventh planet from the Sun, is unique in that it rotates on its side, often described as “rolling around the Sun on its side” with an axial tilt of 98 degrees. It’s often referred to as an “ice giant” and has a blue-green color due to methane in its upper atmosphere.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for an ice giant exploration, as Uranus has no solid surface. Ensure your spacecraft is equipped for atmospheric studies.</li>
+            <li>Bring specialized instruments for studying Uranus' atmosphere, magnetic fields, and unique characteristics.</li>
+            <li>Your spacesuit should provide protection against extreme cold and high radiation levels.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Neptune -->
+<div class="destination">
+    <img src="https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/neptune-1.jpg" alt="Neptune">
+    <h2>Neptune</h2>
+    <p>Neptune is the eighth and most distant planet from the Sun in our solar system, and it’s the smallest gas giant. It's known for its deep blue color and has strong winds and storms in its atmosphere, including the Great Dark Spot.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a gas giant exploration, as Neptune has no solid surface. Ensure your spacecraft is equipped for atmospheric studies.</li>
+            <li>Bring specialized instruments for studying Neptune's atmosphere, winds, and unique features.</li>
+            <li>Your spacesuit should provide protection against extreme cold and high radiation levels.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Moon -->
+<div class="destination">
+    <img src="https://spaceplace.nasa.gov/review/all-about-the-moon/the-moon-near-side.en.jpg" alt="Moon">
+    <h2>Moon</h2>
+    <p>The Moon is Earth's natural satellite and the fifth-largest moon in the solar system. It's the only celestial body beyond Earth that humans have visited. The Moon has a barren and rocky surface with no atmosphere.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Prepare for microgravity conditions when visiting the Moon. Ensure your spacecraft has a proper landing module.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space, extreme temperatures, and micrometeoroids.</li>
+            <li>Bring specialized equipment for lunar exploration and scientific experiments.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Dactyl -->
+<div class="destination">
+    <img src="https://nssdc.gsfc.nasa.gov/imgcat/hires/gal_0202562278.gif" alt="Dactyl">
+    <h2>Dactyl</h2>
+    <p>Dactyl is the largest moon of the asteroid 243 Ida. It was discovered by the Galileo spacecraft in 1993. Dactyl is irregularly shaped and orbits Ida at a relatively close distance.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to a small irregularly shaped moon. Ensure your spacecraft is equipped for precision maneuvers.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space, extreme temperatures, and micrometeoroids.</li>
+            <li>Bring specialized equipment for scientific observations and exploration.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Pluto -->
+<div class="destination">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Pluto_in_True_Color_-_High-Res.jpg" alt="Pluto">
+    <h2>Pluto</h2>
+    <p>Pluto, once considered the ninth planet, is now classified as a dwarf planet. It is located in the Kuiper Belt and has a very eccentric orbit. Pluto is a cold and distant world with a thin atmosphere.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Prepare for a journey to a dwarf planet in the outer solar system. Ensure your spacecraft is equipped for long-duration missions.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space, extreme cold, and micrometeoroids.</li>
+            <li>Bring specialized instruments for studying Pluto's surface and atmosphere.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Atlas -->
+<div class="destination">
+    <img src="https://images.newscientist.com/wp-content/uploads/2017/04/13215942/atlas_4-162.jpg?width=1200" alt="Atlas">
+    <h2>Atlas</h2>
+    <p>Atlas is one of the inner moons of Saturn and is known for its irregular shape. It was discovered by the Voyager 1 spacecraft in 1980. Atlas is part of the extensive ring system of Saturn.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to a small moon within Saturn's ring system. Ensure your spacecraft is equipped for precise orbital maneuvers.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space and micrometeoroids.</li>
+            <li>Bring specialized equipment for studying Saturn's rings and moon system.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Hyperion -->
+<div class="destination">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Hyperion_true.jpg" alt="Hyperion">
+    <h2>Hyperion</h2>
+    <p>Hyperion is one of Saturn's moons and is known for its irregular shape and sponge-like appearance. It was discovered by William Cranch Bond and George Phillips Bond in 1848.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to an irregularly shaped moon with a unique appearance. Ensure your spacecraft is equipped for precise orbital maneuvers.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space and micrometeoroids.</li>
+            <li>Bring specialized equipment for studying Hyperion's surface and composition.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Iapetus -->
+<div class="destination">
+    <img src="https://cdn.britannica.com/09/96609-050-AB6B6599/Image-Iapetus-spacecraft-Cassini-Huygens.jpg" alt="Iapetus">
+    <h2>Iapetus</h2>
+    <p>Iapetus is one of Saturn's moons and is known for its two-tone appearance, with one side significantly darker than the other. It was discovered by Giovanni Domenico Cassini in 1671.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to a moon with a distinct two-tone appearance. Ensure your spacecraft is equipped for precise orbital maneuvers.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space and micrometeoroids.</li>
+            <li>Bring specialized equipment for studying Iapetus' surface, composition, and the cause of its coloration.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Pan -->
+<div class="destination">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Pan_color_PIA21449.png" alt="Pan">
+    <h2>Pan</h2>
+    <p>Pan is one of Saturn's innermost moons and is known for its unique shape resembling a flying saucer. It was discovered by Mark R. Showalter in 1990 while studying images from the Voyager 2 spacecraft.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to an unusually shaped moon within Saturn's ring system. Ensure your spacecraft is equipped for precise orbital maneuvers.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space and micrometeoroids.</li>
+            <li>Bring specialized equipment for studying Saturn's rings and Pan's unique characteristics.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Callisto -->
+<div class="destination">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Callisto_-_July_8_1979_%2838926064465%29.jpg" alt="Callisto">
+    <h2>Callisto</h2>
+    <p>Callisto is one of Jupiter's largest moons and is known for its heavily cratered surface. It's considered one of the most heavily cratered bodies in the solar system. It was discovered by Galileo Galilei in 1610.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to one of Jupiter's largest moons. Ensure your spacecraft is equipped for precise orbital maneuvers.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space and micrometeoroids.</li>
+            <li>Bring specialized equipment for studying Callisto's surface, geology, and history of impacts.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Phobos -->
+<div class="destination">
+    <img src="https://cdn.britannica.com/11/173011-138-7E191ED8/Video-Phobos-rotation-photographs-orbiter-Mars-Express.jpg?w=800&amp;h=450&amp;c=crop" alt="Phobos">
+    <h2>Phobos</h2>
+    <p>Phobos is one of Mars' two moons and is the larger of the two. It has an irregular shape and orbits Mars closely. Phobos is believed to be a captured asteroid or a remnant from a larger body.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to one of Mars' moons. Ensure your spacecraft is equipped for precise orbital maneuvers.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space and micrometeoroids.</li>
+            <li>Bring specialized equipment for studying Phobos' surface, composition, and origin.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Titan -->
+<div class="destination">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Titan_multi_spectral_overlay.jpg/250px-Titan_multi_spectral_overlay.jpg" alt="Titan">
+    <h2>Titan</h2>
+    <p>Titan is one of Saturn's largest moons and is unique for having a thick atmosphere. It's the only moon in the solar system known to have a substantial atmosphere. Titan's surface is shrouded in a dense, orange haze.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to a moon with a thick atmosphere. Ensure your spacecraft is equipped for atmospheric studies and a potential landing.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space, extreme cold, and micrometeoroids.</li>
+            <li>Bring specialized equipment for studying Titan's atmosphere, surface, and potential for life.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Ganymede -->
+<div class="destination">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Ganymede_-_Perijove_34_Composite.png/220px-Ganymede_-_Perijove_34_Composite.png" alt="Ganymede">
+    <h2>Ganymede</h2>
+    <p>Ganymede is the largest moon of Jupiter and the largest moon in the solar system. It's unique for having its own magnetic field. Ganymede's surface includes both older, highly cratered regions and younger, less cratered areas with grooved terrain.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to one of the largest moons in the solar system. Ensure your spacecraft is equipped for precise orbital maneuvers.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space and micrometeoroids.</li>
+            <li>Bring specialized equipment for studying Ganymede's surface, geology, and magnetic field.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Miranda -->
+<div class="destination">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/PIA18185_Miranda%27s_Icy_Face.jpg" alt="Miranda">
+    <h2>Miranda</h2>
+    <p>Miranda is one of Uranus' moons and is known for its highly varied and bizarre terrain. It has cliffs, canyons, and icy surfaces that suggest complex geological processes in its history.</p>
+    
+    <!-- Packing Info Container -->
+    <div class="packing-info">
+        <p><strong>Packing Tips and Information:</strong></p>
+        <ul>
+            <li>Plan for a mission to one of Uranus' unique moons with diverse terrain. Ensure your spacecraft is equipped for precision maneuvers.</li>
+            <li>Your spacesuit should provide protection against the vacuum of space, extreme cold, and micrometeoroids.</li>
+            <li>Bring specialized equipment for studying Miranda's complex geological features.</li>
+        </ul>
+    </div>
+</div>
+    </main>
+    <!-- Add an itinerary section to your HTML at the top-right -->
+<!-- Update the itinerary section in your HTML -->
+<section id="itinerary" class="itinerary-top-right">
+    <h2>Itinerary Customization:</h2>
+    <p>Plan your trip by selecting celestial bodies and durations:</p>
+    <ul id="itinerary-list">
+        <li data-body="Mercury">
+            <span class="itinerary-item">Mercury</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Venus">
+            <span class="itinerary-item">Venus</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Mars">
+            <span class="itinerary-item">Mars</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Jupiter">
+            <span class="itinerary-item">Jupiter</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Saturn">
+            <span class="itinerary-item">Saturn</span>
+            <select class="duration">
+                <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Uranus">
+            <span class="itinerary-item">Uranus</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Neptune">
+            <span class="itinerary-item">Neptune</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body= “Moon">
+            <span class="itinerary-item">Moon</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Dactyl">
+            <span class="itinerary-item">Dactyl</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Pluto">
+            <span class="itinerary-item">Pluto</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Atlas">
+            <span class="itinerary-item">Atlas</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Hyperion">
+            <span class="itinerary-item">Hyperion</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Iapetus">
+            <span class="itinerary-item">Iapetus</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Pan">
+            <span class="itinerary-item">Pan</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Callisto">
+            <span class="itinerary-item">Callisto</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Phobos">
+            <span class="itinerary-item">Phobos</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Titan">
+            <span class="itinerary-item">Titan</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Ganymede">
+            <span class="itinerary-item">Ganymede</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+        <li data-body="Miranda">
+            <span class="itinerary-item">Miranda</span>
+            <select class="duration">
+	    <option value="0">0 days</option>
+                <option value="1">1 day</option>
+                <option value="3">3 days</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+            </select>
+        </li>
+    </ul>
+    <button id="done-button">Done</button>
+</section>
+  <!-- Travel Customization Section (initially hidden) -->
+<section id="travel-customization" class="itinerary-top-right" style="display: none;">
+    <h2>Spacecraft and Travel Modes:</h2>
+    <p>Users can choose from a variety of spacecraft options and travel modes:</p>
+    <label for="spacecraft">Choose a spacecraft:</label>
+    <select id="spacecraft">
+        <option value="Spacecraft 1">Soyuz</option>
+        <option value="Spacecraft 2">New Shepard</option>
+        <option value="Spacecraft 3">Crew Dragon</option>
+    </select>
+
+    <label for="travel-mode">Choose a travel mode:</label>
+    <select id="travel-mode">
+        <option value="Cruise">Cruise</option>
+        <option value="High-Speed Rocket">High-Speed Rocket</option>
+        <option value="Teleportation Fantasy">Teleportation Fantasy</option>
+    </select>
+
+    <button id="finalize-button">Finalize Spacecraft</button>
+</section>
+
+    <script src="script.js"></script>
+    <script>
+  // Function to hide packing information initially
+  function hidePackingInfo() {
+    var packingInfoElements = document.querySelectorAll(".packing-info");
+    packingInfoElements.forEach(function (element) {
+      element.style.display = "none";
+    });
+  }
+
+  // Add an event listener to hide packing info when the page loads
+  document.addEventListener("DOMContentLoaded", hidePackingInfo);
+
+  // Add event listeners for the "Travel Destination Done" and "Travel Mode Done" buttons
+  document.getElementById("done-button").addEventListener("click", function () {
+    // Hide the travel customization section
+    document.getElementById("travel-customization").style.display = "none";
+    // Show the packing information
+    var packingInfoElements = document.querySelectorAll(".packing-info");
+    packingInfoElements.forEach(function (element) {
+      element.style.display = "block";
+    });
+  });
+
+  document.getElementById("finalize-button").addEventListener("click", function () {
+    // Hide the travel customization section
+    document.getElementById("travel-customization").style.display = "none";
+    // Show the packing information
+    var packingInfoElements = document.querySelectorAll(".packing-info");
+    packingInfoElements.forEach(function (element) {
+      element.style.display = "block";
+    });
+  });
+</script>
+  <!-- Add a section for the daily itinerary -->
+    <div id="itinerary" class="hide-main">
+        <h2>Daily Itinerary</h2>
+        <ul id="itinerary-list"></ul>
+    </div>
+    <footer>
+        <p>&copy; 2023 Solar System Explorer</p>
+    </footer>
+  
+</body>
+</html>  
