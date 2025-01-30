@@ -24,3 +24,7 @@ Read about your destination – Learn facts about the planet, its conditions, an
 Check Packing Tips – Open the packing info section to see what you’ll need for your space trip.
 
 Explore More! – Click on another destination and compare different planets.
+
+
+
+(there was some issues with my hackatime, which is why there are so many projects that are part of this rather than just 1 or 2. sorry for the confusion!)
